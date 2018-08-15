@@ -1,0 +1,75 @@
+<html>
+    <body>
+        <title>Advanced Boot Options</title>
+        <head>
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+                </script>
+                 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+                </script> 
+        </head>
+        <style>
+            h1{
+            text-align: center;
+            }
+            #bootloader{
+            background-color: #f2dede;
+            color: #a94442;
+            border-color: #ebccd1;
+            }
+            #recovery{
+            color: #8a6d3b;
+            background-color: #fcf8e3;
+            border-color: #faebcc;
+            }
+            #safe{
+            color: #31708f;
+            background-color: #d9edf7;
+            border-color: #bce8f1;
+            }
+            .separator{
+            border-style: solid;
+            border-color: #777;
+            border-width: 1px;
+            opacity: 0.5;
+            }
+            p{
+            color: #777;
+            }
+            #sys1{
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            }
+        </style>
+        <script>
+            function sreboot(){
+            window.location.href='../../gui/launcher.html';
+            }
+            function smreboot(){
+            }
+            function recovboot(){
+            window.location.href='../../../Recovery/recovery.html';
+            }
+            function bootloaderboot(){
+            window.location.href='../../../Bootloader/bootloader.html';
+            }
+            function sys1boot(){
+            window.location.href='../../../System1/BootParser.html';
+            }
+        </script>
+        <h1>Recovery and Advanced Boot Options</h1>
+        <div class="list-group">
+            <p>General</p>
+            <div class="separator"></div>
+  <button type="button" class="list-group-item" onclick="sreboot()">Soft Reboot</button>
+  <button type="button" class="list-group-item" id="safe" onclick="smreboot()">Reboot into Safe Mode(unavalible)</button>
+  <button type="button" class="list-group-item" id="recovery" onclick="recovboot()">Reboot into Recovery</button>
+  <button type="button" class="list-group-item" id="bootloader" onclick="bootloaderboot()">Reboot into Bootloader</button>
+            <br>
+            <p>Advanced</p>   
+   <div class="separator"></div>
+  <button type="button" class="list-group-item" id="sys1" onclick="sys1boot()">Reboot into System1 Partition</button>
+</div>
+    </body>
+</html>

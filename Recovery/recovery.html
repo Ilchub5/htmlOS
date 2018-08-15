@@ -1,0 +1,61 @@
+<html>
+    <body>
+        <title>Recovery Mode</title>
+        <meta>
+        <head>
+
+        </head>
+        <script>
+            function reboot(){
+                window.location.href='../System0/gui/launcher.html'
+            }
+            function change(){
+                var elem = document.getElementById("e1m");
+                if (elem.value=="Enable System1 mode") elem.value = "Disable System1 mode";
+                else elem.value = "Enable System1 mode";
+            }
+            function bootloader(){
+                window.location.href='../Bootloader/bootloader.html'
+            }
+        </script>
+        <style>
+        body{
+            background-color: darkblue;
+        }
+        input{
+            width: 100%;
+        }
+        h1{
+            text-align: left;
+            color: darkgoldenrod;
+            font-size: 15px;
+        }
+        p{
+            color: darkgoldenrod;
+        }
+        </style>
+        <h1>htmlOS Recovery Mode</h1>
+        <p>Version: 1.1</p>
+        <p>Applied mode: NO_CARRIER</p>
+        <!-- List of Modes-->
+        <!-- SCS - Network is ON/Normal-->
+        <!-- MULTI_SCS - Dual SIM mode present-->
+        <!-- NO_CARRIER - Modem is not present or unavalible-->
+        <!-- TCRE - SIM card(s) not present or invalid -->
+        <p>ICE Security Firmware version: 1.0</p>
+        <p>Bootloader Mode: Normal</p>
+        <div>
+        <input type="button" value="Reboot system now" onclick="reboot()">
+        <br>
+        <input type="button" value="Reboot to bootloader" onclick="bootloader()">
+        <br>
+        <input type="button" value="Apply update from internal/external memory">
+        <br>
+        <input type="button" value="Apply inital update from update.db">
+        <br>
+        <input type="button" value="Enable System1 mode" id="e1m" onclick="change()">
+        <br>
+        <input type="button" value="Wipe data/Factory Reset">
+        </div>
+        </body>
+        </html>
