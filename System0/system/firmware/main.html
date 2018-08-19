@@ -1,0 +1,52 @@
+<style>
+  .log {
+    margin-top: 8px;
+    font-family: monospace;
+  }
+
+  input {
+    width: 100%;
+  }
+</style>
+<head>
+</head>
+<div><strong>Log:</strong></div>
+<div class="log"></div>
+<input id="userInput" value=""></input>
+<script>
+  document.addEventListener('keydown', function (event) {
+
+    switch (event.code) {
+      case 'Tab':
+        showMessage("showing help")
+        break;
+
+      case 'KeyV':
+        run.a1;
+        showMessage(messages[0])
+        break;
+      case 'Enter':
+        input = document.getElementById("userInput").value;
+        showMessage(input);
+        document.getElementById("userInput").value = "";
+        break;
+    }
+  })
+
+  messages = [
+    "OpenFirmware Console v 0.0.1",
+    "Type help to get list of  all avalible commands"
+  ]
+  logElem = document.querySelector(".log");
+  time = new Date();
+
+  messages.forEach(msg => {
+    timeStr = time.toLocaleTimeString();
+    logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  });
+
+  function showMessage(msg) {
+    logElem.innerHTML += timeStr + ": " + msg + "<br/>";
+  }ver = ver
+  if(input = ver) showMessage(messages[0]);
+</script>
