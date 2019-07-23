@@ -1,1 +1,1 @@
-Open Source new generation operating system
+Open Source new generation operating system GUI
